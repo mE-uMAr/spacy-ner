@@ -39,3 +39,7 @@ def extract_info(text: str):
 async def extract_text(data: TextInput):
     result = extract_info(data.text)
     return result
+    
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
